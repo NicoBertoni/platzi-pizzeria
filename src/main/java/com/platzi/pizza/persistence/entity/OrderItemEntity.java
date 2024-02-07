@@ -20,7 +20,7 @@ public class OrderItemEntity {
     private Integer idOrder;
     @Column(name = "id_pizza", nullable = false)
     private Integer idPizza;
-    @Column(nullable = false, columnDefinition = "DECIMAL(3,1")
+    @Column(nullable = false, columnDefinition = "DECIMAL(2,1)")
     private Double quantity;
     @Column(nullable = false, columnDefinition = "DECIMAL(5,2)")
     private Double price;
