@@ -20,8 +20,8 @@ public class OrderEntity {
     @Column(name = "id_order", nullable = false)
     private Integer idOrder;
 
-    @Column(name = "id_costumer",nullable = false,length = 15)
-    private String idCostumer;
+    @Column(name = "id_customer",nullable = false,length = 15)
+    private String idCustomer;
     @Column(nullable = false, columnDefinition = "DATETIME")
     private LocalDateTime date;
     @Column(columnDefinition = "Decimal(6,2)", nullable = false)
