@@ -29,4 +29,7 @@ public class PizzaService {
     public PizzaEntity save(PizzaEntity pizza){
         return this.pizzaRepository.save(pizza);
     }
+    public boolean exists (int idPizza){
+        return pizzaRepository.existsById(idPizza);
+    }
 }
