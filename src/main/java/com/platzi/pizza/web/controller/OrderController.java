@@ -2,6 +2,7 @@ package com.platzi.pizza.web.controller;
 
 import com.platzi.pizza.persistence.entity.OrderEntity;
 import com.platzi.pizza.service.OrderService;
+import org.hibernate.query.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,5 +23,10 @@ public class OrderController {
     @GetMapping
     public ResponseEntity<List<OrderEntity>> getAll (){
         return ResponseEntity.ok(this.orderService.getAll());
+    }
+
+    @GetMapping("/today")
+    public ResponseEntity<List<OrderEntity>> getTodayOrders (){
+        return ResponseEntity.ok(this.orderService.getTodayOrders());
     }
 }
